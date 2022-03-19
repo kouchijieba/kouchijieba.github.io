@@ -1,0 +1,354 @@
+/* basic menu styles */
+.nav-menu {
+	display: inline-block; 
+	/* background: #F8F7FD;*/
+	width:100%;
+	margin:0 auto;
+    
+	
+}
+.nav-menu > li {
+	display: inline-block;  
+	
+	border-right:1px solid #F8F7FD;
+}
+.nav-menu > li:last-child {
+	border-right: none;
+}
+.nav-menu li a {
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	/*调用本地字体*/
+	font-family:sansationregular;
+	text-transform: capitalize;
+	font-style: italic;
+	overflow: visible;
+	line-height: 20px;
+	font-size: 1.5vw;
+	padding: 15px 30px 15px 31px;
+}
+.three-d {
+	/* 任务三、设置3D舞台布景 */
+	-webkit-perspective: 200px;
+	-moz-perspective: 200px;
+	-ms-perspective: 200px;
+	-o-perspective: 200px;
+	perspective: 200px;
+          /*任务四、设置3D舞台布景过渡效果*/
+	-webkit-transition: all .07s linear;
+ 	-moz-transition: all .07s linear;
+ 	-ms-transition: all .07s linear;
+ 	-o-transition: all .07s linear;
+ 	transition:all .7s linear;
+	position: relative;
+}
+.three-d:not(.active):hover {
+	cursor: pointer;
+}
+/*任务五、给不是当前状态的3D舞台的悬浮与聚焦状态设置变形效果*/
+.three-d:not(.active):hover .three-d-box,  .three-d:not(.active):focus .three-d-box {
+	-wekbit-transform: translateZ(-25px) rotateX(90deg);
+ 	-moz-transform: translateZ(-25px) rotateX(90deg);
+ 	-o-transform: translateZ(-25px) rotateX(90deg);
+ 	-ms-transform: translateZ(-25px) rotateX(90deg);
+ 	transform: translateZ(-25px) rotateX(90deg);
+/*    -webkit-transform:rotateX(90deg) translatez(-25px);*/
+       /*   -webkit-transform:rotatex(90deg);*/
+}
+.three-d-box {
+          /*任务六、给3D舞台中“.three-d-box”设置过渡与变形效果*/
+	-webkit-transition: all .3s ease-out;
+ 	-moz-transition: all .3s ease-out;
+ 	-ms-transition: all .3s ease-out;
+ 	-o-transition: all .3s ease-out;
+ 	transition: all .3s ease-out;
+	-webkit-transform: translatez(-25px);
+	-moz-transform: translatez(-25px);
+	-ms-transform: translatez(-25px);
+	-o-transform: translatez(-25px);
+	transform: translatez(-25px);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-pointer-events: none;
+	-moz-pointer-events: none;
+	-ms-pointer-events: none;
+	-o-pointer-events: none;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/*任务七、给导航设置3D前，与3D后变形效果*/
+.front {
+	-webkit-transform: rotatex(0deg) translatez(25px);
+	-moz-transform: rotatex(0deg) translatez(25px);
+	-ms-transform: rotatex(0deg) translatez(25px);
+	-o-transform: rotatex(0deg) translatez(25px);
+	transform: rotatex(0deg) translatez(25px);
+}
+.back {
+	-webkit-transform: rotatex(-90deg) translatez(25px);
+	-moz-transform: rotatex(-90deg) translatez(25px);
+	-ms-transform: rotatex(-90deg) translatez(25px);
+	-o-transform: rotatex(-90deg) translatez(25px);
+	transform: rotatex(-90deg) translatez(25px);
+	color: #FFE7C4;
+}
+.front, .back {
+	/*          border:1px solid red;*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #F8F7FD;
+	padding: 15px 30px 15px 31px;
+	color: #000000;
+	-webkit-pointer-events: none;
+	-moz-pointer-events: none;
+	-ms-pointer-events: none;
+	-o-pointer-events: none;
+	pointer-events: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*任务八、设置导航当前状态与悬浮状态下的背景效果*/
+.nav-menu li .active .front,  .nav-menu li .active .back,  .nav-menu li a:hover .front,  .nav-menu li a:hover .back {
+	background-color: #059d7f;
+	-webkit-background-size: 5px 5px;
+	background-size: 5px 5px;
+	background-position: 0 0, 30px 30px;
+	background-image: -webit-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	background-image: -moz-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	background-image: -ms-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	background-image: -o-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	background-image: linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+}
+
+
+
+
+#certify {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background: url("../files/2.webp") no-repeat;
+	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	
+}
+
+/* 新的样式*/
+
+.sect10 {
+	position: relative;
+	padding: 2vw 0vw ;
+
+}
+
+
+.sect10 .community-carousel {
+	width: 100%;
+	position: relative;
+	padding-top: 0%;
+}
+
+.sect10 .community-carousel .swiper-slide {
+	width: 38%;
+	padding-top: 3%;
+	padding-bottom: 0px;
+}
+
+.sect10 .community-carousel .swiper-slide .slide-holder {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-ms-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+	-webkit-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+}
+
+.sect10 .community-carousel .swiper-slide .slide-holder:hover {
+	opacity: 1;
+}
+
+.sect10 .community-carousel .swiper-slide .ava {
+	width: 100%;
+	position: relative;
+	margin: 0 auto 40px;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-ms-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+}
+
+.sect10 .community-carousel .swiper-slide .ava img {
+	margin: 0 auto;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-ms-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+	border-radius: 50%;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.sect10 .community-carousel .swiper-slide .author-wrap {
+	padding-bottom: 12px;
+}
+
+.sect10 .community-carousel .swiper-slide .author-wrap .name {
+	display: block;
+	font-size: 3vw;
+	color: #059d7f;
+	padding-bottom: 25px;
+}
+
+.sect10 .community-carousel .swiper-slide .author-wrap .role {
+	display: block;
+	color: #000000;
+	font-size: 2.5vw;
+	line-height: 1vw;
+}
+
+.sect10 .community-carousel .swiper-slide blockquote {
+	text-align: center;
+	padding: 0 30px;
+	position: relative;
+	color: #059d7f;
+	font-size: 2vw;
+	line-height: 2;
+	margin: 0 0 34px;
+}
+
+.sect10 .community-carousel .swiper-slide blockquote:before {
+	content: "";
+	display: block;
+	clear: both;
+	position: absolute;
+	left: 0;
+	top: 50%;
+
+	width: 11px;
+	height: 11px;
+	margin-top: -8px;
+}
+
+.sect10 .community-carousel .swiper-slide blockquote:after {
+	content: "";
+	display: block;
+	clear: both;
+	position: absolute;
+	right: 0;
+	top: 50%;
+
+	width: 11px;
+	height: 11px;
+	margin-top: -8px;
+}
+
+.sect10 .community-carousel .swiper-slide-active .slide-holder {
+	/* -webkit-transform: scale(1); */
+	-ms-transform: scale(1);
+	/* transform: scale(1); */
+	opacity: 1 !important;
+}
+
+.sect10 .community-carousel .swiper-slide-active .ava img {
+	opacity: 1 !important;
+}
+
+
+.sect10 .community-carousel .swiper-slide-active .slide-holder {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+
+.swiper-container {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1
+}
+
+
+
+.swiper-container-vertical>.swiper-wrapper {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column
+}
+
+.swiper-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: -webkit-transform;
+	-o-transition-property: transform;
+	transition-property: transform;
+	transition-property: transform, -webkit-transform;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box
+}
+
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0)
+}
+
+.swiper-container-multirow>.swiper-wrapper {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap
+}
+
+
+
+.swiper-slide {
+	-webkit-flex-shrink: 0;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: -webkit-transform;
+	-o-transition-property: transform;
+	transition-property: transform;
+	transition-property: transform, -webkit-transform
+}
+
+
+

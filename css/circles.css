@@ -1,0 +1,55 @@
+body { background-color:#FFFF;}
+.skills-grid p{
+	margin: 20px 0 0 0;
+    color: #8c89a2;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.skills-grid {
+    float: left;
+	
+    margin-right: 0%;
+    width: 25%;
+}
+.skill-grids {
+    margin-top: 5em;
+}
+.skills-grid:nth-child(3){
+  margin-right:0%;
+}
+.circle{
+	color:#8c89a2;
+	font-size:25px;
+}
+span.circles-number {
+    font-size: 23px;
+    font-weight:200;
+    line-height: 7em;
+}
+span.circles-text {
+  font-size: 25px;
+      font-weight:200;
+}
+.circles-text-wrp {
+  line-height:122px!important;
+}
+span.circles-text {
+    font-size: 20px!important;
+}
+
+/*--Responsive--*/
+@media (max-width:1366px){
+	.skill-grids {
+		margin-top: 3em;
+	}
+}
+
+@media (max-width:800px){
+	.skills-grid{
+		margin-top: 3em;
+		margin-right: 0%;
+		width: 100%;
+	}
+}
+
+/*--//Responsive--*/
